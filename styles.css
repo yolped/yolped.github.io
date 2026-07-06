@@ -718,8 +718,15 @@ section {
 
 @media (max-width: 480px) {
   .skills-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: var(--spacing-md);
+  }
+
+  .skill-group-title {
+    font-size: 0.9375rem;
+    color: var(--color-text);
+    padding-left: var(--spacing-sm);
+    border-left: 3px solid var(--color-text);
   }
 
   .hero-name {

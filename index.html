@@ -1,395 +1,659 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Abhishek More — Software Engineer. Personal portfolio website.">
-  <title>Abhishek More — Portfolio</title>
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-  <link rel="stylesheet" href="styles.css">
-  <script>
-    (function() {
-      var theme = 'dark';
-      if (window.matchMedia) {
-        theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-      }
-      document.documentElement.setAttribute('data-theme', theme);
-    })();
-  </script>
-</head>
-<body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="Abhishek More — Software Engineer. Personal portfolio website."
+		/>
+		<title>Abhishek More — Portfolio</title>
+		<link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+		<link rel="stylesheet" href="styles.css" />
+		<script>
+			(function () {
+				var theme = "dark";
+				if (window.matchMedia) {
+					theme = window.matchMedia("(prefers-color-scheme: dark)")
+						.matches
+						? "dark"
+						: "light";
+				}
+				document.documentElement.setAttribute("data-theme", theme);
+			})();
+		</script>
+	</head>
+	<body>
+		<a href="#main" class="skip-link">Skip to main content</a>
 
-  <a href="#main" class="skip-link">Skip to main content</a>
+		<header class="site-header" role="banner">
+			<nav class="nav" aria-label="Main navigation">
+				<div class="nav-links">
+					<a href="#about" class="nav-link">About</a>
+					<a href="#projects" class="nav-link">Projects</a>
+					<a href="#contact" class="nav-link">Contact</a>
+					<a
+						href="assets/resume.pdf"
+						class="nav-link"
+						target="_blank"
+						rel="noopener noreferrer"
+						>Resume</a
+					>
+				</div>
+				<div class="nav-controls">
+					<button
+						class="theme-toggle"
+						aria-label="Toggle theme"
+						type="button"
+					>
+						<span class="icon-light" aria-hidden="true">
+							<svg
+								width="18"
+								height="18"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							>
+								<circle cx="12" cy="12" r="5" />
+								<line x1="12" y1="1" x2="12" y2="3" />
+								<line x1="12" y1="21" x2="12" y2="23" />
+								<line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+								<line
+									x1="18.36"
+									y1="18.36"
+									x2="19.78"
+									y2="19.78"
+								/>
+								<line x1="1" y1="12" x2="3" y2="12" />
+								<line x1="21" y1="12" x2="23" y2="12" />
+								<line
+									x1="4.22"
+									y1="19.78"
+									x2="5.64"
+									y2="18.36"
+								/>
+								<line
+									x1="18.36"
+									y1="5.64"
+									x2="19.78"
+									y2="4.22"
+								/>
+							</svg>
+						</span>
+						<span class="icon-dark" aria-hidden="true">
+							<svg
+								width="18"
+								height="18"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							>
+								<path
+									d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"
+								/>
+							</svg>
+						</span>
+					</button>
+					<button
+						class="mobile-nav-toggle"
+						aria-label="Toggle navigation menu"
+						aria-expanded="false"
+						type="button"
+					>
+						<span class="hamburger-line"></span>
+						<span class="hamburger-line"></span>
+						<span class="hamburger-line"></span>
+					</button>
+				</div>
+			</nav>
+		</header>
 
-  <header class="site-header" role="banner">
-    <nav class="nav" aria-label="Main navigation">
-      <div class="nav-links">
-        <a href="#about" class="nav-link">About</a>
-        <a href="#projects" class="nav-link">Projects</a>
-        <a href="#contact" class="nav-link">Contact</a>
-        <a href="assets/resume.pdf" class="nav-link" target="_blank" rel="noopener noreferrer">Resume</a>
-      </div>
-      <div class="nav-controls">
-        <button class="theme-toggle" aria-label="Toggle theme" type="button">
-          <span class="icon-light" aria-hidden="true">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="5"/>
-              <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
-              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
-              <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
-              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
-            </svg>
-          </span>
-          <span class="icon-dark" aria-hidden="true">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-            </svg>
-          </span>
-        </button>
-        <button class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" type="button">
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
-        </button>
-      </div>
-    </nav>
-  </header>
+		<main id="main">
+			<!-- HERO -->
+			<section id="hero" aria-label="Introduction">
+				<p class="hero-greeting">Hi, I'm</p>
+				<h1 class="hero-name">Abhishek More</h1>
+				<p class="hero-title">Senior Software Engineer</p>
+				<p class="hero-intro">
+					Backend engineer. Open source enthusiast. Building
+					distributed systems and AI-powered applications.
+				</p>
+				<div class="hero-actions">
+					<a
+						href="assets/resume.pdf"
+						class="btn"
+						target="_blank"
+						rel="noopener noreferrer"
+						>View Resume</a
+					>
+					<a href="assets/resume.pdf" class="btn" download
+						>Download Resume</a
+					>
+					<a
+						href="https://github.com/yolped"
+						class="btn"
+						target="_blank"
+						rel="noopener noreferrer"
+						aria-label="GitHub profile"
+						>GitHub</a
+					>
+					<a
+						href="https://www.linkedin.com/in/abhishek-more-sde"
+						class="btn"
+						target="_blank"
+						rel="noopener noreferrer"
+						aria-label="LinkedIn profile"
+						>LinkedIn</a
+					>
+					<a href="mailto:abhishekmore021@gmail.com" class="btn"
+						>Email</a
+					>
+				</div>
+			</section>
 
-  <main id="main">
+			<!-- ABOUT -->
+			<section id="about" aria-label="About me">
+				<h2 class="section-heading">About</h2>
+				<div class="about-content">
+					<p>
+						I'm a Software Engineer with 6 years of experience
+						building scalable backend systems, distributed
+						architectures, and full-stack applications.
+					</p>
+					<ul class="about-bullets">
+						<li>
+							Primary focus on backend engineering, distributed
+							systems, and system design.
+						</li>
+						<li>
+							Experience building AI applications using Python,
+							RAG, Vector Databases, LangChain, and LangGraph.
+						</li>
+						<li>
+							Passionate about open source, developer tools,
+							databases, and system software.
+						</li>
+						<li>
+							Strong believer in writing clean, maintainable, and
+							scalable software.
+						</li>
+					</ul>
+				</div>
+			</section>
 
-    <!-- HERO -->
-    <section id="hero" aria-label="Introduction">
-      <p class="hero-greeting">Hi, I'm</p>
-      <h1 class="hero-name">Abhishek More</h1>
-      <p class="hero-title">Software Engineer</p>
-      <p class="hero-intro">Backend engineer. Open source enthusiast. Building distributed systems and AI-powered applications.</p>
-      <div class="hero-actions">
-        <a href="assets/resume.pdf" class="btn" target="_blank" rel="noopener noreferrer">View Resume</a>
-        <a href="assets/resume.pdf" class="btn" download>Download Resume</a>
-        <a href="https://github.com/yolped" class="btn" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">GitHub</a>
-        <a href="https://www.linkedin.com/in/abhishek-more-sde" class="btn" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">LinkedIn</a>
-        <a href="mailto:abhishekmore021@gmail.com" class="btn">Email</a>
-      </div>
-    </section>
+			<!-- SKILLS -->
+			<section id="skills" aria-label="Skills">
+				<h2 class="section-heading">Skills</h2>
+				<div class="skills-grid">
+					<div class="skill-group">
+						<h3 class="skill-group-title">Languages</h3>
+						<ul class="skill-list">
+							<li>JavaScript</li>
+							<li>Python</li>
+							<li>SQL</li>
+							<li>Go</li>
+						</ul>
+					</div>
+					<div class="skill-group">
+						<h3 class="skill-group-title">Backend</h3>
+						<ul class="skill-list">
+							<li>Go</li>
+							<li>Node.js</li>
+							<li>Express</li>
+							<li>REST APIs</li>
+							<li>Microservices</li>
+							<li>BullMQ</li>
+						</ul>
+					</div>
+					<div class="skill-group">
+						<h3 class="skill-group-title">AI</h3>
+						<ul class="skill-list">
+							<li>Python</li>
+							<li>RAG</li>
+							<li>LangChain</li>
+							<li>LangGraph</li>
+							<li>Vector Databases</li>
+							<li>LLM Applications</li>
+						</ul>
+					</div>
+					<div class="skill-group">
+						<h3 class="skill-group-title">Cloud &amp; DevOps</h3>
+						<ul class="skill-list">
+							<li>AWS</li>
+							<li>Docker</li>
+						</ul>
+					</div>
+					<div class="skill-group">
+						<h3 class="skill-group-title">Databases</h3>
+						<ul class="skill-list">
+							<li>MongoDB</li>
+							<li>MySQL</li>
+						</ul>
+					</div>
+					<div class="skill-group">
+						<h3 class="skill-group-title">Frontend</h3>
+						<ul class="skill-list">
+							<li>React</li>
+							<li>HTML</li>
+						</ul>
+					</div>
+					<div class="skill-group">
+						<h3 class="skill-group-title">Engineering</h3>
+						<ul class="skill-list">
+							<li>Distributed Systems</li>
+							<li>System Design</li>
+							<li>Object-Oriented Programming</li>
+							<li>SOLID Principles</li>
+							<li>Unit Testing</li>
+							<li>Agile</li>
+						</ul>
+					</div>
+				</div>
+			</section>
 
-    <!-- ABOUT -->
-    <section id="about" aria-label="About me">
-      <h2 class="section-heading">About</h2>
-      <div class="about-content">
-        <p>I'm a Software Engineer with 4+ years of experience building scalable backend systems, distributed architectures, and full-stack applications.</p>
-        <ul class="about-bullets">
-          <li>Primary focus on backend engineering, distributed systems, and system design.</li>
-          <li>Experience building AI applications using Python, RAG, Vector Databases, LangChain, and LangGraph.</li>
-          <li>Passionate about open source, developer tools, databases, and system software.</li>
-          <li>Strong believer in writing clean, maintainable, and scalable software.</li>
-        </ul>
-      </div>
-    </section>
+			<!-- OPEN SOURCE PROJECTS -->
+			<section id="projects" aria-label="Open source projects">
+				<h2 class="section-heading">Open Source Projects</h2>
+				<div class="projects-grid">
+					<article class="project-card">
+						<div class="project-title-row">
+							<h3 class="project-title">ShellLab</h3>
+							<span class="badge badge-maintained"
+								>Actively Maintained</span
+							>
+						</div>
+						<p class="project-description">
+							A project and experimental Python shell built for
+							learning how terminals, processes, and operating
+							systems work, including concepts like job control,
+							pipes, and redirection.
+						</p>
+						<div class="project-tech">
+							<span class="tech-tag">Python</span>
+							<span class="tech-tag">Shell</span>
+							<span class="tech-tag">Terminal</span>
+							<span class="tech-tag">Process Management</span>
+						</div>
+						<div class="project-links">
+							<a
+								href="https://github.com/yolped/ShellLab"
+								class="project-link"
+								target="_blank"
+								rel="noopener noreferrer"
+								>GitHub</a
+							>
+						</div>
+					</article>
+					<article class="project-card">
+						<div class="project-title-row">
+							<h3 class="project-title">Pomo</h3>
+							<span class="badge badge-maintained"
+								>Actively Maintained</span
+							>
+						</div>
+						<p class="project-description">
+							A lightweight terminal Pomodoro timer built for
+							developers with a clean CLI experience.
+						</p>
+						<div class="project-tech">
+							<span class="tech-tag">bash</span>
+							<span class="tech-tag">CLI</span>
+							<span class="tech-tag">Terminal</span>
+						</div>
+						<div class="project-links">
+							<a
+								href="https://github.com/yolped/pomo"
+								class="project-link"
+								target="_blank"
+								rel="noopener noreferrer"
+								>GitHub</a
+							>
+						</div>
+					</article>
+					<article class="project-card">
+						<div class="project-title-row">
+							<h3 class="project-title">PolyDB JS</h3>
+							<span class="badge badge-maintained"
+								>Feature Complete</span
+							>
+							<span class="badge badge-maintained"
+								>Occasional Updates</span
+							>
+						</div>
+						<p class="project-description">
+							A lightweight JavaScript database library designed
+							for simplicity, experimentation and embedded data
+							storage.
+						</p>
+						<div class="project-tech">
+							<span class="tech-tag">JavaScript</span>
+							<span class="tech-tag">Database</span>
+							<span class="tech-tag">Embedded</span>
+						</div>
+						<div class="project-links">
+							<a
+								href="https://github.com/yolped/polydb-js"
+								class="project-link"
+								target="_blank"
+								rel="noopener noreferrer"
+								>GitHub</a
+							>
+						</div>
+					</article>
+				</div>
+			</section>
 
-    <!-- SKILLS -->
-    <section id="skills" aria-label="Skills">
-      <h2 class="section-heading">Skills</h2>
-      <div class="skills-grid">
-        <div class="skill-group">
-          <h3 class="skill-group-title">Languages</h3>
-          <ul class="skill-list">
-            <li>JavaScript</li>
-            <li>Python</li>
-            <li>SQL</li>
-            <li>Go</li>
-          </ul>
-        </div>
-        <div class="skill-group">
-          <h3 class="skill-group-title">Backend</h3>
-          <ul class="skill-list">
-            <li>Go</li>
-            <li>Node.js</li>
-            <li>Express</li>
-            <li>REST APIs</li>
-            <li>Microservices</li>
-            <li>BullMQ</li>
-          </ul>
-        </div>
-        <div class="skill-group">
-          <h3 class="skill-group-title">AI</h3>
-          <ul class="skill-list">
-            <li>Python</li>
-            <li>RAG</li>
-            <li>LangChain</li>
-            <li>LangGraph</li>
-            <li>Vector Databases</li>
-            <li>LLM Applications</li>
-          </ul>
-        </div>
-        <div class="skill-group">
-          <h3 class="skill-group-title">Cloud &amp; DevOps</h3>
-          <ul class="skill-list">
-            <li>AWS</li>
-            <li>Docker</li>
-          </ul>
-        </div>
-        <div class="skill-group">
-          <h3 class="skill-group-title">Databases</h3>
-          <ul class="skill-list">
-            <li>MongoDB</li>
-            <li>MySQL</li>
-          </ul>
-        </div>
-        <div class="skill-group">
-          <h3 class="skill-group-title">Frontend</h3>
-          <ul class="skill-list">
-            <li>React</li>
-            <li>HTML</li>
-            <li>CSS</li>
-          </ul>
-        </div>
-        <div class="skill-group">
-          <h3 class="skill-group-title">Engineering</h3>
-          <ul class="skill-list">
-            <li>Distributed Systems</li>
-            <li>System Design</li>
-            <li>Object-Oriented Programming</li>
-            <li>SOLID Principles</li>
-            <li>Unit Testing</li>
-            <li>Agile</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+			<!-- PROJECTS AT WORK -->
+			<section id="projects-work" aria-label="Projects at work">
+				<h2 class="section-heading">Projects at Work</h2>
+				<p class="section-subtitle">
+					Products I've contributed to professionally.
+				</p>
+				<div class="projects-grid">
+					<article class="project-card project-card-work">
+						<h3 class="project-title">
+							Broadcast Notification Platform
+						</h3>
+						<p class="project-description">
+							High-throughput notification engine delivering
+							messages to over 1 million users.
+						</p>
+						<div class="project-contributions">
+							<p class="project-contributions-heading">
+								My contributions
+							</p>
+							<ul class="project-contributions-list">
+								<li>
+									Architected the message queue pipeline using
+									BullMQ and AWS SQS for reliable delivery at
+									scale.
+								</li>
+								<li>
+									Designed retry, dead-letter, and priority
+									queuing mechanisms.
+								</li>
+								<li>
+									Built monitoring and observability for
+									real-time delivery tracking.
+								</li>
+							</ul>
+						</div>
+						<div class="project-tech">
+							<span class="tech-tag">BullMQ</span>
+							<span class="tech-tag">AWS SQS</span>
+							<span class="tech-tag">Node.js</span>
+							<span class="tech-tag">Redis</span>
+						</div>
+					</article>
+					<article class="project-card project-card-work">
+						<h3 class="project-title">eKYC Platform V2</h3>
+						<p class="project-description">
+							Identity verification platform with facial
+							recognition and liveness detection.
+						</p>
+						<div class="project-contributions">
+							<p class="project-contributions-heading">
+								My contributions
+							</p>
+							<ul class="project-contributions-list">
+								<li>
+									Developed facial recognition and liveness
+									detection pipeline.
+								</li>
+								<li>
+									Integrated AWS Rekognition for identity
+									verification.
+								</li>
+								<li>
+									Built the backend API and frontend dashboard
+									for document uploads and verification flow.
+								</li>
+							</ul>
+						</div>
+						<div class="project-tech">
+							<span class="tech-tag">Node.js</span>
+							<span class="tech-tag">React</span>
+							<span class="tech-tag">AWS Rekognition</span>
+							<span class="tech-tag">MongoDB</span>
+						</div>
+					</article>
+					<article class="project-card project-card-work">
+						<h3 class="project-title">Skill Builder</h3>
+						<p class="project-description">
+							No-code chatbot builder platform for creating
+							conversational AI agents.
+						</p>
+						<div class="project-contributions">
+							<p class="project-contributions-heading">
+								My contributions
+							</p>
+							<ul class="project-contributions-list">
+								<li>
+									Designed and built the drag-and-drop flow
+									builder interface.
+								</li>
+								<li>
+									Developed the backend execution engine for
+									chatbot logic processing.
+								</li>
+								<li>
+									Implemented user management and deployment
+									workflows.
+								</li>
+							</ul>
+						</div>
+						<div class="project-tech">
+							<span class="tech-tag">React</span>
+							<span class="tech-tag">Node.js</span>
+							<span class="tech-tag">MongoDB</span>
+							<span class="tech-tag">Docker</span>
+						</div>
+					</article>
+					<article class="project-card project-card-work">
+						<h3 class="project-title">DigiLoan</h3>
+						<p class="project-description">
+							Digital lending platform for loan origination,
+							processing, and management.
+						</p>
+						<div class="project-contributions">
+							<p class="project-contributions-heading">
+								My contributions
+							</p>
+							<ul class="project-contributions-list">
+								<li>
+									Built backend and frontend modules for loan
+									application and approval workflows.
+								</li>
+								<li>
+									Developed referral and tracking systems for
+									banking partners.
+								</li>
+								<li>
+									Implemented secure authentication and
+									role-based access control.
+								</li>
+							</ul>
+						</div>
+						<div class="project-tech">
+							<span class="tech-tag">React</span>
+							<span class="tech-tag">Node.js</span>
+							<span class="tech-tag">Express</span>
+							<span class="tech-tag">MySQL</span>
+						</div>
+					</article>
+					<article class="project-card project-card-work">
+						<h3 class="project-title">
+							Talkk.ai Moderation Platform
+						</h3>
+						<p class="project-description">
+							AI-powered news moderation platform with automated
+							content review.
+						</p>
+						<div class="project-contributions">
+							<p class="project-contributions-heading">
+								My contributions
+							</p>
+							<ul class="project-contributions-list">
+								<li>
+									Developed AI-powered content moderation
+									pipeline for automated news review.
+								</li>
+								<li>
+									Built microservices architecture for
+									scalable content processing.
+								</li>
+								<li>
+									Integrated third-party moderation APIs and
+									custom ML models.
+								</li>
+							</ul>
+						</div>
+						<div class="project-tech">
+							<span class="tech-tag">Go</span>
+							<span class="tech-tag">React</span>
+							<span class="tech-tag">AWS</span>
+							<span class="tech-tag">Microservices</span>
+						</div>
+					</article>
+				</div>
+			</section>
 
-    <!-- OPEN SOURCE PROJECTS -->
-    <section id="projects" aria-label="Open source projects">
-      <h2 class="section-heading">Open Source Projects</h2>
-      <div class="projects-grid">
-        <article class="project-card">
-          <div class="project-title-row">
-            <h3 class="project-title">ShellLab</h3>
-            <span class="badge badge-maintained">Actively Maintained</span>
-          </div>
-          <p class="project-description">A project and experimental Python shell built for learning how terminals, processes, and operating systems work, including concepts like job control, pipes, and redirection.</p>
-          <div class="project-tech">
-            <span class="tech-tag">Python</span>
-            <span class="tech-tag">Shell</span>
-            <span class="tech-tag">Terminal</span>
-            <span class="tech-tag">Process Management</span>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/yolped/ShellLab" class="project-link" target="_blank" rel="noopener noreferrer">GitHub</a>
-          </div>
-        </article>
-        <article class="project-card">
-          <div class="project-title-row">
-            <h3 class="project-title">Pomo</h3>
-            <span class="badge badge-maintained">Actively Maintained</span>
-          </div>
-          <p class="project-description">A lightweight terminal Pomodoro timer built for developers with a clean CLI experience.</p>
-          <div class="project-tech">
-            <span class="tech-tag">bash</span>
-            <span class="tech-tag">CLI</span>
-            <span class="tech-tag">Terminal</span>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/yolped/pomo" class="project-link" target="_blank" rel="noopener noreferrer">GitHub</a>
-          </div>
-        </article>
-        <article class="project-card">
-          <div class="project-title-row">
-            <h3 class="project-title">PolyDB JS</h3>
-            <span class="badge badge-maintained">Feature Complete</span>
-            <span class="badge badge-maintained">Occasional Updates</span>
-          </div>
-          <p class="project-description">A lightweight JavaScript database library designed for simplicity, experimentation and embedded data storage.</p>
-          <div class="project-tech">
-            <span class="tech-tag">JavaScript</span>
-            <span class="tech-tag">Database</span>
-            <span class="tech-tag">Embedded</span>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/yolped/polydb-js" class="project-link" target="_blank" rel="noopener noreferrer">GitHub</a>
-          </div>
-        </article>
-      </div>
-    </section>
+			<!-- EXPERIENCE -->
+			<section id="experience" aria-label="Experience">
+				<h2 class="section-heading">Experience</h2>
+				<div class="experience-list">
+					<div class="experience-item">
+						<div class="experience-meta">
+							<p class="experience-role">Software Engineer</p>
+							<p class="experience-company">GrayMatrix</p>
+							<p class="experience-date">April 2023 — Present</p>
+						</div>
+						<ul class="experience-highlights">
+							<li>
+								Built a broadcast notification platform capable
+								of delivering messages to over 1 million users
+								using BullMQ and AWS SQS.
+							</li>
+							<li>
+								Developed eKYC Version 2 with facial recognition
+								and liveness detection.
+							</li>
+							<li>
+								Integrated AWS Rekognition for identity
+								verification.
+							</li>
+							<li>
+								Built Skill Builder, a no-code chatbot platform.
+							</li>
+							<li>
+								Developed AI-powered news moderation for
+								Talkk.ai.
+							</li>
+							<li>Worked on referral systems for banking.</li>
+							<li>
+								Built backend and frontend modules for DigiLoan.
+							</li>
+							<li>Developed secure authentication systems.</li>
+						</ul>
+					</div>
+					<div class="experience-item">
+						<div class="experience-meta">
+							<p class="experience-role">Full Stack Developer</p>
+							<p class="experience-company">Tag8</p>
+							<p class="experience-date">Jan 2022 — Jan 2023</p>
+						</div>
+						<ul class="experience-highlights">
+							<li>Modernized frontend architecture.</li>
+							<li>Improved backend infrastructure.</li>
+							<li>Developed logistics platform.</li>
+							<li>Implemented new customer-facing features.</li>
+						</ul>
+					</div>
+					<div class="experience-item">
+						<div class="experience-meta">
+							<p class="experience-role">
+								Full Stack Web Developer
+							</p>
+							<p class="experience-company">
+								Competitive Fieldwork and Research
+							</p>
+							<p class="experience-date">Jan 2021 — Jan 2022</p>
+						</div>
+						<ul class="experience-highlights">
+							<li>Built React interfaces.</li>
+							<li>Developed Node.js backend services.</li>
+							<li>Integrated third-party APIs.</li>
+							<li>Improved security and authentication.</li>
+						</ul>
+					</div>
+				</div>
+			</section>
 
-    <!-- PROJECTS AT WORK -->
-    <section id="projects-work" aria-label="Projects at work">
-      <h2 class="section-heading">Projects at Work</h2>
-      <p class="section-subtitle">Products I've contributed to professionally.</p>
-      <div class="projects-grid">
-        <article class="project-card project-card-work">
-          <h3 class="project-title">Broadcast Notification Platform</h3>
-          <p class="project-description">High-throughput notification engine delivering messages to over 1 million users.</p>
-          <div class="project-contributions">
-            <p class="project-contributions-heading">My contributions</p>
-            <ul class="project-contributions-list">
-              <li>Architected the message queue pipeline using BullMQ and AWS SQS for reliable delivery at scale.</li>
-              <li>Designed retry, dead-letter, and priority queuing mechanisms.</li>
-              <li>Built monitoring and observability for real-time delivery tracking.</li>
-            </ul>
-          </div>
-          <div class="project-tech">
-            <span class="tech-tag">BullMQ</span>
-            <span class="tech-tag">AWS SQS</span>
-            <span class="tech-tag">Node.js</span>
-            <span class="tech-tag">Redis</span>
-          </div>
-        </article>
-        <article class="project-card project-card-work">
-          <h3 class="project-title">eKYC Platform V2</h3>
-          <p class="project-description">Identity verification platform with facial recognition and liveness detection.</p>
-          <div class="project-contributions">
-            <p class="project-contributions-heading">My contributions</p>
-            <ul class="project-contributions-list">
-              <li>Developed facial recognition and liveness detection pipeline.</li>
-              <li>Integrated AWS Rekognition for identity verification.</li>
-              <li>Built the backend API and frontend dashboard for document uploads and verification flow.</li>
-            </ul>
-          </div>
-          <div class="project-tech">
-            <span class="tech-tag">Node.js</span>
-            <span class="tech-tag">React</span>
-            <span class="tech-tag">AWS Rekognition</span>
-            <span class="tech-tag">MongoDB</span>
-          </div>
-        </article>
-        <article class="project-card project-card-work">
-          <h3 class="project-title">Skill Builder</h3>
-          <p class="project-description">No-code chatbot builder platform for creating conversational AI agents.</p>
-          <div class="project-contributions">
-            <p class="project-contributions-heading">My contributions</p>
-            <ul class="project-contributions-list">
-              <li>Designed and built the drag-and-drop flow builder interface.</li>
-              <li>Developed the backend execution engine for chatbot logic processing.</li>
-              <li>Implemented user management and deployment workflows.</li>
-            </ul>
-          </div>
-          <div class="project-tech">
-            <span class="tech-tag">React</span>
-            <span class="tech-tag">Node.js</span>
-            <span class="tech-tag">MongoDB</span>
-            <span class="tech-tag">Docker</span>
-          </div>
-        </article>
-        <article class="project-card project-card-work">
-          <h3 class="project-title">DigiLoan</h3>
-          <p class="project-description">Digital lending platform for loan origination, processing, and management.</p>
-          <div class="project-contributions">
-            <p class="project-contributions-heading">My contributions</p>
-            <ul class="project-contributions-list">
-              <li>Built backend and frontend modules for loan application and approval workflows.</li>
-              <li>Developed referral and tracking systems for banking partners.</li>
-              <li>Implemented secure authentication and role-based access control.</li>
-            </ul>
-          </div>
-          <div class="project-tech">
-            <span class="tech-tag">React</span>
-            <span class="tech-tag">Node.js</span>
-            <span class="tech-tag">Express</span>
-            <span class="tech-tag">MySQL</span>
-          </div>
-        </article>
-        <article class="project-card project-card-work">
-          <h3 class="project-title">Talkk.ai Moderation Platform</h3>
-          <p class="project-description">AI-powered news moderation platform with automated content review.</p>
-          <div class="project-contributions">
-            <p class="project-contributions-heading">My contributions</p>
-            <ul class="project-contributions-list">
-              <li>Developed AI-powered content moderation pipeline for automated news review.</li>
-              <li>Built microservices architecture for scalable content processing.</li>
-              <li>Integrated third-party moderation APIs and custom ML models.</li>
-            </ul>
-          </div>
-          <div class="project-tech">
-            <span class="tech-tag">Go</span>
-            <span class="tech-tag">React</span>
-            <span class="tech-tag">AWS</span>
-            <span class="tech-tag">Microservices</span>
-          </div>
-        </article>
-      </div>
-    </section>
+			<!-- EDUCATION -->
+			<section id="education" aria-label="Education">
+				<h2 class="section-heading">Education</h2>
+				<div class="education-item">
+					<p class="education-degree">
+						Bachelor of Science (Information Technology)
+					</p>
+					<p class="education-school">
+						Vidyalankar School of Information Technology
+					</p>
+				</div>
+				<div class="education-item">
+					<p class="education-degree">Diploma</p>
+					<p class="education-school">Vidyalankar Polytechnic</p>
+				</div>
+			</section>
 
-    <!-- EXPERIENCE -->
-    <section id="experience" aria-label="Experience">
-      <h2 class="section-heading">Experience</h2>
-      <div class="experience-list">
-        <div class="experience-item">
-          <div class="experience-meta">
-            <p class="experience-role">Software Engineer</p>
-            <p class="experience-company">Gray Matrix</p>
-            <p class="experience-date">April 2023 — Present</p>
-          </div>
-          <ul class="experience-highlights">
-            <li>Built a broadcast notification platform capable of delivering messages to over 1 million users using BullMQ and AWS SQS.</li>
-            <li>Developed eKYC Version 2 with facial recognition and liveness detection.</li>
-            <li>Integrated AWS Rekognition for identity verification.</li>
-            <li>Built Skill Builder, a no-code chatbot platform.</li>
-            <li>Developed AI-powered news moderation for Talkk.ai.</li>
-            <li>Worked on referral systems for banking.</li>
-            <li>Built backend and frontend modules for DigiLoan.</li>
-            <li>Developed secure authentication systems.</li>
-          </ul>
-        </div>
-        <div class="experience-item">
-          <div class="experience-meta">
-            <p class="experience-role">Full Stack Developer</p>
-            <p class="experience-company">Tag8</p>
-            <p class="experience-date">Jan 2022 — Jan 2023</p>
-          </div>
-          <ul class="experience-highlights">
-            <li>Modernized frontend architecture.</li>
-            <li>Improved backend infrastructure.</li>
-            <li>Developed logistics platform.</li>
-            <li>Implemented new customer-facing features.</li>
-          </ul>
-        </div>
-        <div class="experience-item">
-          <div class="experience-meta">
-            <p class="experience-role">Full Stack Web Developer</p>
-            <p class="experience-company">Competitive Fieldwork and Research</p>
-            <p class="experience-date">Jan 2021 — Jan 2022</p>
-          </div>
-          <ul class="experience-highlights">
-            <li>Built React interfaces.</li>
-            <li>Developed Node.js backend services.</li>
-            <li>Integrated third-party APIs.</li>
-            <li>Improved security and authentication.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+			<!-- CONTACT -->
+			<section id="contact" aria-label="Contact">
+				<h2 class="section-heading">Contact</h2>
+				<p class="contact-intro">
+					Based in Mumbai, India. I'm always open to interesting
+					conversations and opportunities.
+				</p>
+				<div class="contact-links">
+					<a
+						href="mailto:abhishekmore021@gmail.com"
+						class="contact-link"
+						>Email</a
+					>
+					<a
+						href="https://github.com/yolped"
+						class="contact-link"
+						target="_blank"
+						rel="noopener noreferrer"
+						>GitHub</a
+					>
+					<a
+						href="https://www.linkedin.com/in/abhishek-more-sde"
+						class="contact-link"
+						target="_blank"
+						rel="noopener noreferrer"
+						>LinkedIn</a
+					>
+					<a
+						href="assets/resume.pdf"
+						class="contact-link"
+						target="_blank"
+						rel="noopener noreferrer"
+						>Resume</a
+					>
+				</div>
+			</section>
+		</main>
 
-    <!-- EDUCATION -->
-    <section id="education" aria-label="Education">
-      <h2 class="section-heading">Education</h2>
-      <div class="education-item">
-        <p class="education-degree">Bachelor of Science (Information Technology)</p>
-        <p class="education-school">Vidyalankar School of Information Technology</p>
-      </div>
-      <div class="education-item">
-        <p class="education-degree">Diploma</p>
-        <p class="education-school">Vidyalankar Polytechnic</p>
-      </div>
-    </section>
+		<footer class="site-footer" role="contentinfo">
+			<p>&copy; <span id="current-year"></span> Abhishek More.</p>
+		</footer>
 
-    <!-- CONTACT -->
-    <section id="contact" aria-label="Contact">
-      <h2 class="section-heading">Contact</h2>
-      <p class="contact-intro">Based in Mumbai, India. I'm always open to interesting conversations and opportunities.</p>
-      <div class="contact-links">
-        <a href="mailto:abhishekmore021@gmail.com" class="contact-link">Email</a>
-        <a href="https://github.com/yolped" class="contact-link" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a href="https://www.linkedin.com/in/abhishek-more-sde" class="contact-link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a href="assets/resume.pdf" class="contact-link" target="_blank" rel="noopener noreferrer">Resume</a>
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="site-footer" role="contentinfo">
-    <p>&copy; <span id="current-year"></span> Abhishek More. Built with HTML, CSS &amp; JavaScript. Hosted on GitHub Pages.</p>
-  </footer>
-
-  <script src="script.js" defer></script>
-</body>
+		<script src="script.js" defer></script>
+	</body>
 </html>
